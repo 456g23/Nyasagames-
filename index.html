@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nyasagames</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Links to the CSS file -->
+    <style>
+        /* Inline styling for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #fff; /* Set background to white */
+            color: #333;
+        }
+        #left-icons, #right-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h1 {
+            flex: 1;
+            font-size: 32px; /* Increased font size for prominence */
+            text-align: center;
+            color: red; /* Nyasagames title in red */
+            margin: 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            filter: hue-rotate(200deg) brightness(0) saturate(100%) invert(18%) sepia(94%) saturate(3000%) hue-rotate(189deg) brightness(91%) contrast(101%); /* Icon color set to blue */
+        }
+        main {
+            padding: 20px;
+        }
+        /* Styling for game banners */
+        .game-option {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .game-banner {
+            width: 200px;
+            height: 120px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Betting section styling */
+        #betting-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+        #betting-section h2 {
+            color: #333;
+        }
+        .betting-link {
+            display: block;
+            margin: 10px 0;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .betting-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Home Icon on the Left -->
+        <div id="left-icons">
+            <a href="index.html"><img src="assets/home-icon.png" alt="Home" class="icon"></a>
+        </div>
+        
+        <!-- Centered Title -->
+        <h1>Nyasagames</h1>
+        
+        <!-- Login and Register Icons to the Right -->
+        <div id="right-icons">
+            <a href="login.html" id="login-link">
+                <img src="assets/login-icon.png" alt="Log In" class="icon"> Log In
+            </a>
+            <a href="register.html" id="register-link">
+                <img src="assets/register-icon.png" alt="Register" class="icon"> Register
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Game Selection Section with Banners -->
+        <section id="game-selection">
+            <h2>Select a Game</h2>
+            <div class="game-option" onclick="startGame('chess')">
+                <img src="assets/images/chess-banner.png" alt="Chess Banner" class="game-banner">
+                <p>Chess</p>
+            </div>
+            <div class="game-option" onclick="startGame('pool')">
+                <img src="assets/images/pool-banner.png" alt="Pool Banner" class="game-banner">
+                <p>Pool</p>
+            </div>
+            <div class="game-option" onclick="startGame('checkers')">
+                <img src="assets/images/checkers-banner.png" alt="Checkers Banner" class="game-banner">
+                <p>Checkers</p>
+            </div>
+            <div class="game-option" onclick="startGame('solitaire')">
+                <img src="assets/images/solitaire-banner.png" alt="Solitaire Banner" class="game-banner">
+                <p>Solitaire</p>
+            </div>
+            <div class="game-option" onclick="startGame('scrabble')">
+                <img src="assets/images/scrabble-banner.png" alt="Scrabble Banner" class="game-banner">
+                <p>Scrabble</p>
+            </div>
+            <div class="game-option" onclick="startGame('poker')">
+                <img src="assets/images/poker-banner.png" alt="Poker Banner" class="game-banner">
+                <p>Poker</p>
+            </div>
+            <div class="game-option" onclick="startGame('bingo')">
+                <img src="assets/images/bingo-banner.png" alt="Bingo Banner" class="game-banner">
+                <p>Bingo</p>
+            </div>
+            <div class="game-option" onclick="startGame('sudoku')">
+                <img src="assets/images/sudoku-banner.png" alt="Sudoku Banner" class="game-banner">
+                <p>Sudoku</p>
+            </div>
+        </section>
+
+        <!-- Betting Section -->
+        <section id="betting-section">
+            <h2>Betting Sites</h2>
+            <a href="https://bit.ly/3ygPnTP" class="betting-link">Betway</a>
+            <a href="https://media.premierbetpartners.com/redirect.aspx?pid=114831&bid=5039" class="betting-link">Premier Bet</a>
+            <a href="https://premierbetzone.com/static-start-page.html?AffiliateID=666802" class="betting-link">Premier Bet Zone</a>
+        </section>
+
+        <!-- Expanded Player Ratings Section -->
+        <section id="player-ratings">
+            <h2>Player Ratings</h2>
+            <p>Top-rated players:</p>
+            <ul>
+                <li>Player 1 - Rating: 5 stars</li>
+                <li>Player 2 - Rating: 4.5 stars</li>
+                <li>Player 3 - Rating: 4 stars</li>
+                <li>Player 4 - Rating: 3.8 stars</li>
+                <li>Player 5 - Rating: 3.5 stars</li>
+                <li>Player 6 - Rating: 3 stars</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="about.html">About Us</a> | <a href="faq.html">FAQ</a>
+    </footer>
+
+    <script src="js/main.js"></script> <!-- Links to the JavaScript file -->
+</body>
+</html>
